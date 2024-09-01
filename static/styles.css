@@ -1,0 +1,194 @@
+/* General body styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f0f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Ensure the body takes up full viewport height */
+    align-items: center; /* Center content horizontally */
+}
+
+p {
+    font-family: 'Inter';
+}
+
+/* Fixed width and vertical spacing for content */
+.container {
+    width: 1000px; /* Fixed width */
+    margin: 20px auto; /* Center horizontally with gap from top and bottom */
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    background-color: #e0e5ec;
+    padding: 20px;
+    box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
+    border-radius: 15px;
+    margin-bottom: 20px; /* Vertical gap */
+}
+
+.header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em;
+    color: #6a0dad;
+    margin: 0;
+}
+
+.header p {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.bold {
+    font-weight: bold;
+    color: #6a0dad;
+}
+
+/* Menu styling */
+.menu ul {
+    list-style: none;
+    font-family: 'Inter';
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.menu ul li {
+    display: inline;
+    position: relative;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #6a0dad;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #6a0dad;
+    transition: width 0.3s ease;
+    margin-top: 5px;
+}
+
+.menu ul li a:hover {
+    color: #4b0082;
+    transform: translateY(-3px);
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero section */
+.hero-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #e0e5ec;
+    box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
+    border-radius: 10px;
+    
+    max-width: 1000px; /* Fixed max-width to match container */
+    margin-bottom: 20px; /* Vertical gap */
+}
+
+/* Hero Section Text Styling */
+.hero-section h2 {
+    font-family: 'Lobster', cursive;
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 7px 7px 15px #a3b1c6, inset -7px -7px 15px #ffffff;
+    margin-bottom: 20px;
+}
+
+.analyze-button {
+    font-family: Poppings;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6a0dad;
+    color: white;
+    cursor: pointer;
+    box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
+    transition: background-color 0.3s;
+}
+
+.analyze-button:hover {
+    background-color: #4b0082;
+}
+
+/* Info section */
+.info-section {
+    padding: 20px;
+    background-color: #e0e5ec;
+    box-shadow: 7px 7px 15px #a3b1c6, -7px -7px 15px #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Vertical gap */
+}
+
+.info-section h2 {
+    font-family: 'Lobster', cursive;
+    color: #6a0dad;
+    margin-bottom: 10px;
+}
+
+.info-section p, .info-section ul {
+    color: #555;
+}
+
+.roll-no {
+    float: right;
+    font-size: 0.9em;
+    color: #4b0082;
+}
+
+.mentors {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mentors .supervisor, .mentors .co-supervisor {
+    width: 45%;
+}
+
+.overview {
+    display: grid;
+    justify-content: space-between;
+}
+
+.overview .problem-statement, .overview .developed-solution {
+    width: 48%;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 10px;
+    
+    
+    margin-top: 20px; /* Vertical gap */
+}

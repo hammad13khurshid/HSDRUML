@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSDRUML Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function analyzePost() {
+            const textInput = document.getElementById('text-input').value;
+            const progressBar = document.getElementById('progress');
+            const resultDiv = document.getElementById('result');
+    
+            resultDiv.innerText = ''; // Clear previous results
+            progressBar.style.width = '0%'; // Reset progress bar
+            resultDiv.innerHTML = "<p>Loading... Please wait while the model processes your input.</p>";
+    
+            fetch('/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: textInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                progressBar.style.width = '100%'; // Set progress bar to full
+                
+                if (data.error) {
+                    resultDiv.innerHTML = `<p class="error">Error: ${data.error}</p>`;
+                } else {
+                    const resultHTML = `
+                        <p><strong>Text Classification:</strong> ${data.type}</p>
+                        <p><strong>Debug Info:</strong></p>
+                        <ul>
+                            ${data.debug.map(info => `<li>${info}</li>`).join('')}
+                        </ul>
+                    `;
+                    resultDiv.innerHTML = resultHTML;
+                }
+            })
+            .catch(error => {
+                progressBar.style.width = '100%';
+                resultDiv.innerHTML = `<p class="error">An error occurred: ${error.message}</p>`;
+            });
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="bold">HSDRUML</h1>
+            <p>Hate Speech Detection in Roman Urdu Using Natural Language Processing</p>
+        </header>
+
+        <main class="hero-section">
+            <h2>Enter A Post to Analyze</h2>
+            <textarea id="text-input" class="text-input" placeholder="Enter Roman Urdu text here..."></textarea>
+            <button class="analyze-button" onclick="analyzePost()">Analyze Post</button>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <div id="result" class="hate-speech-type"></div>
+        </main>
+
+        <section class="info-section">
+            <h2>Project Description</h2>
+            <p>This project aims to detect hate speech in Roman Urdu using machine learning techniques.</p>
+        </section>
+
+        <section class="info-section">
+            <h2>Group Members</h2>
+            <ul>
+                <li><b>Hafsa Kanwal</b> <span class="roll-no">FA20-BSE-011</span></li>
+                <li><b>Hammad Khurshid</b> <span class="roll-no">FA20-BSE-013</span></li>
+                <li><b>Shohaib Ali Chohan</b> <span class="roll-no">FA20-BSE-065</span></li>
+            </ul>
+        </section>
+
+        <section class="info-section mentors">
+            <div class="supervisor">
+                <h2>Supervisor</h2>
+                <p>Dr. Nouman Ali</p>
+            </div>
+            <div class="co-supervisor">
+                <h2>Co-Supervisor</h2>
+                <p>Engr. Maryum Hamdani</p>
+            </div>
+        </section>
+
+        <section class="info-section overview">
+            <h2>Project Overview</h2>
+            <p>Hate speech and online harassment based on gender, ethnicity, or other identities create a hostile and unsafe online environment, particularly for marginalized groups in Pakistan. These issues can lead to real-world consequences, including discrimination, violence, and social exclusion. Existing automated solutions primarily cater to English or other dominant languages, leaving Roman Urdu users inadequately protected.<br></p>
+            <p>This system is developed to counter hate speech online.</p>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 HSDRUML FYP. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
