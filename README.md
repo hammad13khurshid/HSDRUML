@@ -54,16 +54,17 @@ To tackle this issue, we developed a web application that uses Natural Language 
 ## How to Use
 
 1. **Clone the Repository**: 
-   ```bash
+```bash
    git clone https://github.com/hammad13khurshid/HSDRUML.git
-
+```
 2.	Install Dependencies:
-   ```bash
+```bash
    pip install -r requirements.txt
-
-3.	Run the Web App:
-   ```bash 
+```
+4.	Run the Web App:
+```bash 
    flask run OR python app.py
+```
 
 4.	Input Text: Enter the text you want to analyze in the input form on the web app.
 5.	Analyze: Click on the “Analyze” button to get the classification result.
@@ -71,15 +72,15 @@ To tackle this issue, we developed a web application that uses Natural Language 
 
 ## Group Members
 
-    •	Member 1: Hafsa Kanwal      | FA20-BSE-011
-	•	Member 2: Hammad Khurshid   | FA20-BSE-013
-    •	Member 3: Shoaib Ali Chohan | FA20-BSE-065
+    •	**Member 1:** Hafsa Kanwal      | FA20-BSE-011
+	•	**Member 2:** Hammad Khurshid   | FA20-BSE-013
+    •	**Member 3:** Shoaib Ali Chohan | FA20-BSE-065
 
 	
 ## Supervisor and Co-Supervisor
 
-	•	Supervisor: Dr. Nouman Ali
-	•	Co-Supervisor: Engr. Maryum Hamdani
+	•	**Supervisor:** Dr. Nouman Ali
+	•	**Co-Supervisor:** Engr. Maryum Hamdani
 
 ## License
 
