@@ -72,15 +72,15 @@ To tackle this issue, we developed a web application that uses Natural Language 
 
 ## Group Members
 
-    •	**Member 1:** Hafsa Kanwal      | FA20-BSE-011
-	•	**Member 2:** Hammad Khurshid   | FA20-BSE-013
-    •	**Member 3:** Shoaib Ali Chohan | FA20-BSE-065
+    •	Member 1: Hafsa Kanwal      | FA20-BSE-011
+    •	Member 2: Hammad Khurshid   | FA20-BSE-013
+    •	Member 3: Shoaib Ali Chohan | FA20-BSE-065
 
 	
 ## Supervisor and Co-Supervisor
 
-	•	**Supervisor:** Dr. Nouman Ali
-	•	**Co-Supervisor:** Engr. Maryum Hamdani
+	•	Supervisor:      Dr. Nouman Ali
+	•	Co-Supervisor:   Engr. Maryum Hamdani
 
 ## License
 
