@@ -73,7 +73,6 @@ To tackle this issue, we developed a web application that uses Natural Language 
 ## Group Members
 
     •	Member 1: Hafsa Kanwal      | FA20-BSE-011
-    •	Member 2: Hammad Khurshid   | FA20-BSE-013
     •	Member 3: Shoaib Ali Chohan | FA20-BSE-065
 
 	
