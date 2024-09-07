@@ -44,6 +44,11 @@
                 resultDiv.innerHTML = `<p class="error">An error occurred: ${error.message}</p>`;
             });
         }
+      
+        function toggleTextVisibility() {
+    const textInput = document.getElementById('text-input');
+    const toggleLabel = document.getElementById('toggle-label');
+
     </script>
     
 </head>
@@ -56,11 +61,42 @@
 
         <main class="hero-section">
             <h2>Enter A Post to Analyze</h2>
-            <textarea id="text-input" class="text-input" placeholder="Enter Roman Urdu text here..."></textarea>
-            <button class="analyze-button" onclick="analyzePost()">Analyze Post</button>
-            <div class="progress-bar">
-                <div id="progress" class="progress"></div>
+            
+            <!-- Text input with toggle functionality -->
+            <div class="input-container">
+                <textarea id="text-input" class="text-input blurred" placeholder="Enter Roman Urdu text here..."></textarea>
+                <div class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="visibility-toggle" onclick="toggleTextVisibility()">
+                        <span class="slider round"></span>
+                    </label>
+                    <span id="toggle-label">Show Input</span>
+                </div>
             </div>
+
+            <!-- Add this at the bottom of your HTML file -->
+ <script>
+    function toggleTextVisibility() 
+    {
+        const textInput = document.getElementById('text-input');
+        const toggleLabel = document.getElementById('toggle-label');
+        
+        // Toggle blur effect on text input
+        if (textInput.classList.contains('blurred')) {
+            textInput.classList.remove('blurred');
+            toggleLabel.textContent = 'Blur Input';
+        } else {
+            textInput.classList.add('blurred');
+            toggleLabel.textContent = 'Show Input';
+        }
+    }
+  </script>
+            
+            <!-- Analyze Button -->
+            <button class="analyze-button" onclick="analyzePost()">Analyze Post</button>
+        
+        
+            <!-- Result Section -->
             <div id="result" class="hate-speech-type"></div>
         </main>
 
@@ -101,3 +137,4 @@
     </div>
 </body>
 </html>
+    

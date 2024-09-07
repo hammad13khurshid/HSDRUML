@@ -56,17 +56,17 @@ To tackle this issue, we developed a web application that uses Natural Language 
 ## How to Use
 
 1. **Clone the Repository**: 
-   ```bash
+```bash
    git clone https://github.com/hammad13khurshid/HSDRUML.git
-
+```
 2.	Install Dependencies:
-   ```bash
+```bash
    pip install -r requirements.txt
-
+```
 3.	Run the Web App:
-   ```bash 
+```bash 
    flask run OR python app.py
-
+```
 4.	Input Text: Enter the text you want to analyze in the input form on the web app.
 5.	Analyze: Click on the “Analyze” button to get the classification result.
 6.	View Results: The results, along with the probability scores, will be displayed on the same page.
