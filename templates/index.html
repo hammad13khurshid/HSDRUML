@@ -8,11 +8,9 @@
     <script>
         function analyzePost() {
             const textInput = document.getElementById('text-input').value;
-            const progressBar = document.getElementById('progress');
             const resultDiv = document.getElementById('result');
     
             resultDiv.innerText = ''; // Clear previous results
-            progressBar.style.width = '0%'; // Reset progress bar
             resultDiv.innerHTML = "<p>Loading... Please wait while the model processes your input.</p>";
     
             fetch('/analyze', {
@@ -24,8 +22,6 @@
             })
             .then(response => response.json())
             .then(data => {
-                progressBar.style.width = '100%'; // Set progress bar to full
-                
                 if (data.error) {
                     resultDiv.innerHTML = `<p class="error">Error: ${data.error}</p>`;
                 } else {
@@ -40,17 +36,10 @@
                 }
             })
             .catch(error => {
-                progressBar.style.width = '100%';
                 resultDiv.innerHTML = `<p class="error">An error occurred: ${error.message}</p>`;
             });
         }
-      
-        function toggleTextVisibility() {
-    const textInput = document.getElementById('text-input');
-    const toggleLabel = document.getElementById('toggle-label');
-
     </script>
-    
 </head>
 <body>
     <div class="container">
@@ -73,28 +62,9 @@
                     <span id="toggle-label">Show Input</span>
                 </div>
             </div>
-
-            <!-- Add this at the bottom of your HTML file -->
- <script>
-    function toggleTextVisibility() 
-    {
-        const textInput = document.getElementById('text-input');
-        const toggleLabel = document.getElementById('toggle-label');
-        
-        // Toggle blur effect on text input
-        if (textInput.classList.contains('blurred')) {
-            textInput.classList.remove('blurred');
-            toggleLabel.textContent = 'Blur Input';
-        } else {
-            textInput.classList.add('blurred');
-            toggleLabel.textContent = 'Show Input';
-        }
-    }
-  </script>
             
             <!-- Analyze Button -->
             <button class="analyze-button" onclick="analyzePost()">Analyze Post</button>
-        
         
             <!-- Result Section -->
             <div id="result" class="hate-speech-type"></div>
@@ -135,6 +105,27 @@
             <p>&copy; 2024 HSDRUML FYP. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- Toggle Text Visibility Script -->
+    <script>
+        function toggleTextVisibility() 
+        {
+            const textInput = document.getElementById('text-input');
+            const toggleLabel = document.getElementById('toggle-label');
+            
+            // Toggle blur effect on text input
+            if (textInput.classList.contains('blurred')) 
+            {
+                textInput.classList.remove('blurred');
+                toggleLabel.textContent = 'Blur Input';
+            } 
+            else 
+            {
+                textInput.classList.add('blurred');
+                toggleLabel.textContent = 'Show Input';
+            }
+        }
+    </script>
+
 </body>
 </html>
-    
