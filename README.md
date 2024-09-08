@@ -3,7 +3,7 @@ A Flask-based web application that uses a fine-tuned RoBERTa model to detect hat
 
 ![Version](https://img.shields.io/badge/version-1.0-blue.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-[![Support via Patreon](https://img.shields.io/badge/Support%20me%20on-Patreon-orange?style=for-the-badge&logo=patreon)](https://www.patreon.com/hammadkhurshid)
+[![Support via Patreon](https://img.shields.io/badge/Support%20me%20on-Patreon-orange.svg?logo=patreon)](https://www.patreon.com/hammadkhurshid)
 
 ## Table of Contents
 
